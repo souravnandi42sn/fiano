@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% block content %}
+ <div class="row">
+  <div class="col-sm-9">
+  	<div class="container">
+  		<p>charts<p>
+  		<canvas id="myChart" width="400" height="400"></canvas>
+  	</div>
+  </div>
+  <div class="col-sm-3">
+  	<div class="container">
+  		<h1>algorithm type</h1>
+  	</div>
+  </div>
+</div> 
+{% endblock %}
+{% block sidebar %}
+<style>
+.container{
+
+background-color: rgba(125,209,240,0.5);
+border-radius: 25px;
+
+}
+</style>
+<div class="container">
+<form action="/upload_file" method="POST" enctype="multipart/form-data">
+	<h5 class="text-center">
+		upload file
+	</h5><hr/>
+	<div class="row">
+		<div class="col-md-12">
+			<input type="file" name="myfile" class="form-control">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+			<div class="form-group">
+				<input type="submit" name="uploadBtn" value="submit" class="btn btn-info">
+			</div>
+		</div>
+	</div>
+</form>
+</div>
+
+{% endblock %}
